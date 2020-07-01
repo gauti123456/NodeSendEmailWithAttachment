@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Node.js Send Email</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+      <div class="container">
+          <h1 class="text-center">
+              Node.js Send Email With Attachment
+          </h1>
+          <form action="/sendemail" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <input class="form-control" type="email" name="to" required placeholder="To:">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="subject" placeholder="Subject:" required id="">
+            </div>
+            <div class="form-group">
+                <textarea required class="form-control" name="body" id="" cols="30" rows="10" placeholder="Body:"></textarea>
+            </div>
+            <label for="attachment">Attachment:</label>
+            <div class="form-group">
+                <input type="file" required class="form-control" name="image" id="">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-block btn-danger">
+                    Send Message
+                </button>
+            </div>
+        </form>
+      </div>
+</body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>
